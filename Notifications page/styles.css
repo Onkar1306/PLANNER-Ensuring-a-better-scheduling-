@@ -1,0 +1,117 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6200ea;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#header h1 {
+    font-size: 1.8em;
+}
+
+.profile-settings .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Notification Section */
+#notification-page {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#notification-page h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Notification List */
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9fc;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.notification-item:hover {
+    transform: translateY(-5px);
+}
+
+.notification-info {
+    flex: 1;
+}
+
+.task-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.task-time {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Notification Status */
+.notification-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.pending {
+    background-color: #ffb74d;
+}
+
+.done {
+    background-color: #4caf50;
+}
+
+.overdue {
+    background-color: #f44336;
+}
+
+.status-text {
+    font-size: 0.9em;
+    color: #666;
+}
