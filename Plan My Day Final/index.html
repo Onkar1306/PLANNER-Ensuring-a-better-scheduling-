@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan My Day</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Plan My Day</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Event</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody">
+                <!-- Predefined tasks with rounded corners -->
+                <tr class="rounded-row">
+                    <td>1</td>
+                    <td contenteditable="true">Wake up, Good Morning</td>
+                    <td contenteditable="true">07:00 AM</td>
+                </tr>
+                <tr class="rounded-row">
+                    <td>2</td>
+                    <td contenteditable="true">Breakfast Time</td>
+                    <td contenteditable="true">10:00 AM</td>
+                </tr>
+                <tr class="rounded-row">
+                    <td>3</td>
+                    <td contenteditable="true">Work</td>
+                    <td contenteditable="true">11:00 AM</td>
+                </tr>
+                <tr class="rounded-row">
+                    <td>4</td>
+                    <td contenteditable="true">Lunch Break</td>
+                    <td contenteditable="true">01:00 PM</td>
+                </tr>
+                <tr class="rounded-row">
+                    <td>5</td>
+                    <td contenteditable="true">Work</td>
+                    <td contenteditable="true">03:00 PM</td>
+                </tr>
+                <tr class="rounded-row">
+                    <td>6</td>
+                    <td contenteditable="true">Snacks</td>
+                    <td contenteditable="true">05:00 PM</td>
+                </tr>
+                <tr class="rounded-row">
+                    <td>7</td>
+                    <td contenteditable="true">Dinner </td>
+                    <td contenteditable="true">08:00 PM</td>
+                </tr>
+                <tr class="rounded-row">
+                    <td>8</td>
+                    <td contenteditable="true">Good Night</td>
+                    <td contenteditable="true">10:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="addTaskBtn">+ Add</button>
+    </div>
+
+    <!-- Modal for Adding Task -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Event</h2>
+            <form id="taskForm">
+                <label for="taskName">Event:</label>
+                <input type="text" id="taskName" required>
+                <label for="taskTime">Time:</label>
+                <input type="time" id="taskTime" required>
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
