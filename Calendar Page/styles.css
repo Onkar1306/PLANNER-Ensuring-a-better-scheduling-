@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    /* background-color: #cac0e4; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.month-year {
+    display: flex;
+    gap: 10px;
+    
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    /* background-color: #5836a5; */
+    background-color: #512da8;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #7252e7;
+}
+
+/* Calendar Body */
+.calendar-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.calendar-days div {
+    padding: 10px;
+    /* background-color: #f0f0f0; */
+    background-color: #cac0e4;
+    /* background-color: #856cc2; */
+    border: 1px solid #512da8;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    flex: 1;
+}
+
+.calendar-dates div {
+    padding: 10px;
+    /* background-color: #fff; */
+    background-color: #edeaf6;
+    border: 1px solid #25007a;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 100px;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-dates div:hover {
+    background-color:  #cac0e4;
+    /* background-color: #e1e1e1; */
+}
+
+.calendar-dates div.event-added {
+    background-color: #a896d3; /* Background color change when event is added */
+}
+
+.event {
+    background-color: #fb296c;
+    color: rgb(19, 1, 1);
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    font-size: 15px;
+    text-align: center;
+    word-wrap: break-word;
+    position: absolute;
+    bottom: 5px;
+    /* left: 0;
+    right: 0; */
+}
