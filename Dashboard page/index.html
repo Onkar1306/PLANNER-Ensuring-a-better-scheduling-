@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <a href="#"><img src="Infinity (3) (1).png" alt="Logo"></a> 
+        </div>
+        <div class="board">
+            <a href="#">Dashboard</a>
+            <a href="/My Task/index.html">My Task</a>
+            <a href="/Plan My Day Final/index.html">Plan My Day</a>
+            <a href="/Calendar Page/index.html">Calendar</a>
+            <a href="#">Reports</a>
+            <a href="#">Rewards</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="Search..." onkeyup="searchTasks()">
+            </div>
+            <div class="task-actions">
+                <button class="new-task" onclick="addNewTask()">
+                    <a href="/My Task/index.html"><i class="fas fa-plus"></i> New Task</a>
+                </button>
+                <button class="task-points">
+                    <i class="fas fa-coins"></i> Task Points
+                </button>
+            </div>
+            <div class="icons">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="main-content">
+            <div class="cards">
+                <div><div id="card1">My Task</div></div>
+                <div><div id="card2">My Categories</div>
+                <div id="card4">Schedule Meeting</div></div>
+                <!-- <div><div id="card3"> -->
+                    <!-- Calendar goes here -->
+                    <div><div class="calendar-container">
+                        <div class="calendar-header">
+                            <button id="prevMonth">&lt;</button>
+                            <div id="monthLabel"></div>
+                            <button id="nextMonth">&gt;</button>
+                        </div>
+                        <div class="calendar-body">
+                            <div class="days-of-week">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div id="calendarDays" class="days-grid"></div>
+                        </div>
+                    </div>
+                    
+                <!-- </div> -->
+                <div id="card5">Notes</div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
